@@ -33,8 +33,11 @@ const handlePlayerMove = (
     setBoard([...board]);
 
     const gameStep = GameStep(board, symbols, difficulty);
+    console.log("gameStep", gameStep.winner);
     setBoard([...gameStep.board]);
-    setWinner(gameStep.winner);
+    if(gameStep.winner){
+      return setWinner(gameStep.winner);
+    }
 
     if (!gameStep.winner) {
       setTurn(aiPlayer);

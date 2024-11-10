@@ -21,8 +21,9 @@ const BoardGame = () => {
       setTurn,
       difficulty
     );
-  };
 
+  };
+  
   const handleResetGame = () => {
     handleCellClick(9);
   };
@@ -37,7 +38,7 @@ const BoardGame = () => {
           <div className="text-2xl font-semibold mb-4 text-center text-gray-700">
             {winner === "draw"
               ? "Hoà"
-              : `Người chơi ${winner === huPlayer ? "X" : "O"} thắng`}
+              : `${winner} thắng`}
           </div>
         )}
         <div>
